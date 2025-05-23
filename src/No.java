@@ -20,6 +20,14 @@ public class No {
         }
     }
 }
+public class buscaEmOrdem(No node) {
+    if (node != null) {
+        buscaEmOrdem(node.esquerda);
+        System.out.println(node.valor + valor " ");
+        buscaEmOrdem(node.direita);
+    }
+
+}
 
 
 
