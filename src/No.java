@@ -20,6 +20,7 @@ public class No {
         }
     }
 }
+
 public class buscaEmOrdem(No node) {
     if (node != null) {
         buscaEmOrdem(node.esquerda);
@@ -27,6 +28,25 @@ public class buscaEmOrdem(No node) {
         buscaEmOrdem(node.direita);
     }
 
+}
+
+public void buscaPosOrdem(No node) {
+    if (node != null) {
+      buscaPosOrdem(node.esquerda);
+      buscaPosOrdem(node.direita);
+      System.out.println(node.valor + " ");
+    }
+}
+
+public void bucaEmNivel(No node) {
+    if (raiz == null) return; 
+    
+    Queue<No> fila = new LinkedList<>();
+    No atual = fila.poll();
+    System.out.println(atual.valor + " ");
+    
+    if (atual.esquerda !=null) fila.add(atual.esquerda);
+    if(atual.direita !-null) fila.add(atual.direita);
 }
 
 
